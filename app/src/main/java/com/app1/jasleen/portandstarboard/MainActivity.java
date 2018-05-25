@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     // Method for "Means Left" and "Means Right" Buttons
-    private void setupMeansStateButton(int buttonId, final Game.Side name) { //Game.Side??
+    private void setupMeansStateButton(int buttonId, final Game.Side name) {
         //Wire up the left bottom button to do stuff
         //.. get the button
         Button btnMeansState = findViewById(buttonId);
@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String currentState = startGame.getChosenSideName();
-                //startGame.setWinner(Game.Side.PORT);  I think this changes winner so will always be true?
                 if (startGame.checkIfCorrect(name)){
                     Log.i(TAG, "User guess of " + currentState + " was Correct!");
                     Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT)
@@ -77,82 +76,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-/**
- * Inside onCreate
- //setupPortButton(); // method for Means Left Button
- //setupStarboardButton(); // method for Means Right Button
-
- //Wire up the left top button to do stuff
- //.. get the button
- Button btn1 = findViewById(R.id.btnLeft);
- //.. set what happens when the user clicks
- btn1.setOnClickListener(new View.OnClickListener() {
-@Override
-public void onClick(View v) {
-Log.i(TAG1, "Port (left) is red");
-Toast.makeText(getApplicationContext(), "Port (left) is red", Toast.LENGTH_SHORT)
-.show();
-}
-});
- //Wire up the right top button to do stuff
- //.. get the button
- Button btn2 = findViewById(R.id.btnRight);
- //.. set what happens when the user clicks
- btn2.setOnClickListener(new View.OnClickListener() {
-@Override
-public void onClick(View v) {
-Log.i(TAG2, "Starboard (right) is green");
-Toast.makeText(getApplicationContext(), "Starboard (right) is green", Toast.LENGTH_SHORT)
-.show();
-}
-});
- */
-
-/** after
- private void setupPortButton() {
- //Wire up the left bottom button to do stuff
- //.. get the button
- Button btn3 = findViewById(R.id.btnPort);
- //.. set what happens when the user clicks
- btn3.setOnClickListener(new View.OnClickListener(){
-@Override
-public void onClick(View v) {
-//startGame.setWinner(Game.Side.PORT);  I think this changes winner so will be true
-if (startGame.checkIfCorrect(Game.Side.PORT)){
-Log.i(TAG3, "User guess of Port was Correct!");
-Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT)
-.show();
-}else{
-Log.i(TAG3, "User guess of Port was Incorrect");
-Toast.makeText(getApplicationContext(), "Incorrect :(", Toast.LENGTH_SHORT)
-.show();
-}
-}
-});
- }
-
- private void setupStarboardButton() {
- //Wire up the right bottom button to do stuff
- //.. get the button
- Button btn4 = findViewById(R.id.btnStarboard);
- //.. set what happens when the user clicks
- btn4.setOnClickListener(new View.OnClickListener() {
-@Override
-public void onClick(View v) {
-//startGame.setWinner(Game.Side.STARBOARD);  I think this changes winner so will be true
-if (startGame.checkIfCorrect(Game.Side.STARBOARD)) {
-Log.i(TAG4, "User guess of Starboard was Correct!");
-Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT)
-.show();
-}else{
-Log.i(TAG4, "User guess of Starboard was Incorrect :(");
-Toast.makeText(getApplicationContext(), "Incorrect :(", Toast.LENGTH_SHORT)
-.show();
-}
-}
-});
- //startGame = new Game();
- //updateUI();
- }
- */

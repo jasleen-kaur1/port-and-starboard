@@ -26,15 +26,7 @@ public class Game {
 
 
     private Side winner = Side.PORT;
-/**
-    public Side getWinner() { // needed??
-        return winner;
-    }
 
-    public void setWinner(Side winner) { // needed??
-        this.winner = winner;
-    }
-*/
     public Game() {
         // Pick a winner:
         Side buttons[] = {Side.PORT, Side.STARBOARD};
@@ -49,39 +41,4 @@ public class Game {
     public boolean checkIfCorrect(Side side) {
         return (winner == side);
     }
-    /**
-    @Override
-        public String toString(){
-
-    }
-    */
-
-    /**
-     * If you want to see how to use this class, run this main()
-     *   (Not used when running under Android, but you can still run
-     *    this through Android Studios)
-     * @param args
-     */
-    /**
-    public static void main(String[] args) {
-        // Create a "game"
-        Game game = new Game();
-
-        // Display what's happening:
-        String prompt = "Which side is '" + game.getChosenSideName() + "'?";
-        System.out.println(prompt);
-
-        // This would be read in from the user (or button press)
-        Game.Side userGuess = Game.Side.PORT;
-
-        // Check the answer:
-        String endMessage;
-        if (game.checkIfCorrect(userGuess)) {
-            endMessage = "Correct!";
-        } else {
-            endMessage = "Incorrect guess; please try again.";
-        }
-        System.out.println(endMessage);
-    }
-*/
 }
