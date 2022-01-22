@@ -6,6 +6,6 @@ Game randomly assigns a side of the ship (Port or Starboard) and user guesses wh
 
 ## App Features
 
-If user selects correct answer, a toast message "Correct" is displayed and a LogCat message "User guess of Port was Correct!" (or Starboard) is displayed.
-If user selects incorrect answer, a toast message "Incorrect :(" is displayed and a LogCat message "User guess of Port was Incorrect." (or Starboard) is displayed.
-After displaying current game's messages a new random side (Port or Starboad) is picked for the next game.
+* If user selects correct answer, a toast message "Correct" is displayed and a LogCat message "User guess of Port was Correct!" (or Starboard) is displayed.
+* If user selects incorrect answer, a toast message "Incorrect :(" is displayed and a LogCat message "User guess of Port was Incorrect." (or Starboard) is displayed.
+* After displaying current game's messages a new random side (Port or Starboad) is picked for the next game.
